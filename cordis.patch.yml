@@ -1,0 +1,5 @@
+# Bundle layer for this profile. `dsh plugin add` applies it into the profile.
+# The row resolves by package name, so the installed copy is what boots.
+- insert:
+    - id: codex-efforting
+      name: dsh-codex-efforting

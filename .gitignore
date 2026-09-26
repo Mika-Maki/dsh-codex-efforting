@@ -1,0 +1,44 @@
+# ⚠ lib/ 不要忽略。
+# 本包没有构建步骤：lib/index.js 与 lib/client.js 既是源码，也是发布产物
+# —— 浏览器半是手写成品，直接由 window.__ModuleLoader__ 加载。
+# 一旦忽略 lib/，别人 clone 下来就装不起来。
+
+# 依赖
+node_modules/
+.pnpm-store/
+.yarn/
+jspm_packages/
+
+# 打包产物
+*.tgz
+*.tar.gz
+
+# 日志
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# 临时与缓存
+tmp/
+temp/
+.cache/
+coverage/
+.nyc_output/
+
+# 环境变量
+.env
+.env.*
+!.env.example
+
+# 编辑器与系统
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini

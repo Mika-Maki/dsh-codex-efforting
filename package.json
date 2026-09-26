@@ -1,0 +1,61 @@
+{
+  "name": "dsh-codex-efforting",
+  "version": "1.0.0",
+  "description": "DeepSeek Harness 插件：把输入框的模型选择器换成卡片式推理等级滑块 —— 档位自动取自模型的 reasoning.efforts（Off/Low/High/Max），Max 用紫渐变与白色流动圆点，拖动时浮出该档位的消耗提示，卡片配色随系统深浅色切换，点模型名可切换模型。无 Thinking Effort 的模型自动交回出厂选择器。",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "model-selection",
+    "reasoning-effort"
+  ],
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-model-selection",
+        "@deepseek-ai/dsh-client-ui-renderer"
+      ]
+    }
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "README.en.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node test/smoke.mjs"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.2",
+    "react": "^18.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mika-Maki/dsh-codex-efforting.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Mika-Maki/dsh-codex-efforting/issues"
+  },
+  "homepage": "https://github.com/Mika-Maki/dsh-codex-efforting#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT"
+}
