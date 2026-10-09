@@ -1,7 +1,7 @@
 {
   "name": "dsh-codex-efforting",
-  "version": "1.0.0",
-  "description": "DeepSeek Harness 插件：把输入框的模型选择器换成卡片式推理等级滑块 —— 档位自动取自模型的 reasoning.efforts（Off/Low/High/Max），Max 用紫渐变与白色流动圆点，拖动时浮出该档位的消耗提示，卡片配色随系统深浅色切换，点模型名可切换模型。无 Thinking Effort 的模型自动交回出厂选择器。",
+  "version": "1.1.0",
+  "description": "DeepSeek Harness 插件：把输入框的模型选择器换成卡片式推理等级滑块。强度只由档位在 reasoning.efforts 里的位置推出，适配器改名换序都不用改这里；动效随档位递增（静止 / 静色条 / 稀疏喷发 / 密集喷发），档位色还会画到输入框上（全覆盖柔光 + 外缘光环），输入框粒子、中心光晕、边缘辉光各有独立开关。无 Thinking Effort 的模型自动交回出厂选择器。",
   "keywords": [
     "dsh",
     "dsh-plugin",
