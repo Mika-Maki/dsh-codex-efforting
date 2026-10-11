@@ -5,7 +5,7 @@
 **把 DeepSeek Harness 输入框里的模型选择器，做成一张带推理等级滑块的卡片。**
 
 [![GitHub](https://img.shields.io/badge/GitHub-Mika--Maki%2Fdsh--codex--efforting-181717?logo=github&logoColor=white)](https://github.com/Mika-Maki/dsh-codex-efforting)
-[![version](https://img.shields.io/badge/version-1.1.0-5B50E6)](https://github.com/Mika-Maki/dsh-codex-efforting/releases)
+[![version](https://img.shields.io/badge/version-1.2.0-5B50E6)](https://github.com/Mika-Maki/dsh-codex-efforting/releases)
 [![license](https://img.shields.io/badge/license-MIT-3083FD)](./LICENSE)
 [![platform](https://img.shields.io/badge/platform-DeepSeek%20Harness%20Web-171717)](#)
 
@@ -56,7 +56,9 @@ dsh plugin --profile web add github:Mika-Maki/dsh-codex-efforting
 
 ## 设置
 
-三个开关各自独立，都在 **设置 → 通用**：
+四个开关各自独立，都在 **设置 → 通用**。新增的 **为所有模型渲染思考选择** 默认关闭：开启后，有至少两个 `reasoning.efforts` 的模型使用真实档位并提交选择；无可选档位的模型显示 `None / Minimal / Low / Medium / High / Xhigh`，初始与复位为 `Medium`，选择仅影响界面与动效，不发送不支持的推理参数。关闭后，这些模型恢复原生选择器。
+
+原有三个效果开关：
 
 | 开关 | 关掉后 |
 | --- | --- |
@@ -66,7 +68,7 @@ dsh plugin --profile web add github:Mika-Maki/dsh-codex-efforting
 
 只影响输入框上的光效；卡片内部的动效不受这几个开关控制。
 
-> 偏好存在浏览器本地（`localStorage`），因此**按浏览器生效**，不随 Profile 同步，清站点数据会回到默认的全开。
+> 偏好存在浏览器本地（`localStorage`），因此**按浏览器生效**，不随 Profile 同步，清站点数据后，三个效果开关恢复开启，全模型思考选择恢复关闭。
 
 ## 许可
 

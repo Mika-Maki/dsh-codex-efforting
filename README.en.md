@@ -5,7 +5,7 @@
 **Turns the model selector in the DeepSeek Harness composer into a card with a reasoning-effort slider.**
 
 [![GitHub](https://img.shields.io/badge/GitHub-Mika--Maki%2Fdsh--codex--efforting-181717?logo=github&logoColor=white)](https://github.com/Mika-Maki/dsh-codex-efforting)
-[![version](https://img.shields.io/badge/version-1.1.0-5B50E6)](https://github.com/Mika-Maki/dsh-codex-efforting/releases)
+[![version](https://img.shields.io/badge/version-1.2.0-5B50E6)](https://github.com/Mika-Maki/dsh-codex-efforting/releases)
 [![license](https://img.shields.io/badge/license-MIT-3083FD)](./LICENSE)
 [![platform](https://img.shields.io/badge/platform-DeepSeek%20Harness%20Web-171717)](#)
 
@@ -56,7 +56,9 @@ Restart the profile to activate it.
 
 ## Settings
 
-Three independent switches, all under **Settings > General**:
+Four independent switches, all under **Settings > General**. The new **Render reasoning selection for all models** switch defaults to off. When enabled, models declaring at least two `reasoning.efforts` keep their real, submitted choices. Other models display `None / Minimal / Low / Medium / High / Xhigh`, starting and resetting at `Medium`; these choices affect presentation and motion only, without sending unsupported reasoning parameters. Turning the switch off restores the native selector for those models.
+
+The three existing effect switches:
 
 | Switch | When it is off |
 | --- | --- |
@@ -66,7 +68,7 @@ Three independent switches, all under **Settings > General**:
 
 They govern the input field's overlays only; the card's own motion is not affected by them.
 
-> Preferences are stored in the browser (`localStorage`), so they are **per-browser**: they do not travel with the profile, and clearing site data returns them to their all-on defaults.
+> Preferences are stored in the browser (`localStorage`), so they are **per-browser**: they do not travel with the profile, and clearing site data enables the three effects and disables reasoning selection for all models.
 
 ## License
 
